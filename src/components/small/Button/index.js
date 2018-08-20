@@ -1,17 +1,29 @@
 import React from 'react'
+import { Button, Icon } from 'semantic-ui-react'
+
 import './index.css'
-import 'semantic-ui-css/semantic.min.css'
 
+const ButtonModern = ({ reverse, visibleContent = '', hiddenContent = '', icon = '', animated = '' ,link}) => {
 
-const ButtonShowProfile = ({ link }) => (
-    <div>
-        <a href={link}>
-            <button className='ui fade animated button button-profile'>
-                <div className='visible content'>Profile</div>
-                <div className='hidden content'>View GitHub</div>
-            </button>
-        </a>
-    </div>
-)
+    if (reverse) {
+        return (
+            <a href={link}>
+                <Button animated={animated}>
+                    <Button.Content visible><Icon name={icon} size='large'></Icon></Button.Content>
+                    <Button.Content hidden>{hiddenContent}</Button.Content>
+                </Button>
+            </a>
+        )
+    } else {
+        return (
+            <a href={link}>
+                <Button animated={animated}>
+                    <Button.Content visible>{visibleContent}</Button.Content>
+                    <Button.Content hidden><Icon name={icon}></Icon>{hiddenContent}</Button.Content>
+                </Button>
+            </a>
+        )
+    }
+}
 
-export default ButtonShowProfile
+export default ButtonModern
