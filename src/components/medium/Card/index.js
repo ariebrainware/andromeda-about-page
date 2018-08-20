@@ -1,6 +1,8 @@
 import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
-import ButtonShowProfile from '../../small/Button'
+
+import ModalDimmer from '../ModalDimmer'
+
 import './index.css'
 
 const CardProfile = ({ name }) => {
@@ -16,7 +18,7 @@ const CardProfile = ({ name }) => {
           <Card.Description>Arie Brainware is a Full-stack Junior Web Developer.</Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <ButtonShowProfile link='https://github.com/ariebrainware' />
+          <ModalDimmer name='ariebrainware'/>
         </Card.Content>
       </Card>
     )
@@ -32,7 +34,7 @@ const CardProfile = ({ name }) => {
           <Card.Description>Indro Lie is a Front-end Junior Web Developer.</Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <ButtonShowProfile link='https://github.com/indrolie' />
+        <ModalDimmer name='indrolie'/>
         </Card.Content>
       </Card>
     )
@@ -48,7 +50,7 @@ const CardProfile = ({ name }) => {
           <Card.Description>Abba is a Front-end Junior Web Developer.</Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <ButtonShowProfile link='https://github.com/abbayosua' />
+          <ModalDimmer name='abbayosua' />
         </Card.Content>
       </Card>
     )
@@ -64,7 +66,7 @@ const CardProfile = ({ name }) => {
           <Card.Description>Wondo is a Back-end Junior Web Developer.</Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <ButtonShowProfile link='https://github.com/wondoindra' />
+          <ModalDimmer name='wondoindra' />
         </Card.Content>
       </Card>
     )
