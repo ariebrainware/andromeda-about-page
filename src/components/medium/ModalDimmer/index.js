@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
 import { Header, Image, Modal, Button, Icon } from 'semantic-ui-react'
 
